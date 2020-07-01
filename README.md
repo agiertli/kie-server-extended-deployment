@@ -78,11 +78,11 @@ Next, we'll modify application.yml and add the list of KJARs to be deployed:
 ```
 deployment:
   kjars:
-    - alias: cpo-business-application-kjar
-      artifactId: cpo-business-application-kjar
+    - alias: sample-kjar
+      artifactId: business-application-kjar
       containerId: business-application-kjar-1_0-SNAPSHOT
-      groupId: com.db.compliance.ec.cpo
-      version: 0.0.2-SNAPSHOT
+      groupId: com.company
+      version: 1.0-SNAPSHOT 
  ```
  
 The format is quite concise - if you compare it to the default kie-server state file, we have drastically reduced the amount of configuration needed to get the single KJAR deployed.
