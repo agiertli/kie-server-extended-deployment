@@ -136,6 +136,8 @@ public class KieServerDeployer {
 ```
 
 and that's it! There is one thing to notice here - the kie-server state file will be created by kie-server anyway. This will be done *after* the code above was executed. We do not necesarily need to care about this in the cloud environment - because on our container restart, this file will be removed (due to ephemeral nature). However, in local environment, this file will likely stay in your current working directory between application restart and that's why the *isDeployed* method is implemented in the bean above. Another approach how to mitigate this would be to create a bean with shutdown hook which would delete the kie-server state file just before the JVM shutdown.
+
+To test, execute `mvn clean install` inside model and kjar project. Then execute `mvn spring-boot:run` in service project.
  
  
 
