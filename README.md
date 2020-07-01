@@ -64,7 +64,7 @@ Good thing about combination of spring boot and kie-server is that it offers a l
 First, we'll start with creating a simple POJO which will represent a KJAR to be deployed:
 
 ```
-public class Kjar {
+public class KJAR {
 
     private String groupId;
     private String artifactId;
@@ -99,7 +99,7 @@ public class KieServerDeployer {
     @Autowired
     KieServer kieServer;
 
-    private List<Kjar> kjars;
+    private List<KJAR> kjars;
 
     @Bean
     CommandLineRunner deployAndValidate() {
